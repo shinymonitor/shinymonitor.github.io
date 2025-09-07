@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="../FAVICON.ICO">
+    <title>Arin Upadhyay</title>
+</head>
+<body bgcolor="#181818" text="white">
+    <header>
+        <code>👨‍💻 <b>ARIN UPADHYAY</b> BSc. Computer Science</code>
+    </header>
+    <img src="../RGBDIV.GIF" height="1" width="225">
+    <br>
+    <section>
+        <code>
+        <a href="../index.html">HOME</a> | <a href="../blog.html">BLOG</a> | <a href="../projects.html">PROJECTS</a> | <a href="../other.html">OTHER</a>
+        </code>
+    </section>
+    <img src="../RGBDIV.GIF" height="1" width="225">
+    <br>
+    <section>
+        <code>
+        <small>29-08-2025</small>
+        <h2>How I Code in C</h2>
+        <blockquote>
+        <p>
+            C is one of my favorite languages, but it comes with a reputation: powerful, fast but dangerous if you're careless.
+            Over time, I've developed my own set of rules and habits that keep my C code safe, clean, and consistent.
+            This post is basically how I like to structure projects, name things, and enforce safety.
+        </p>
+        <p>
+            <b>Naming Convention: </b><br>
+            I keep naming dead simple and consistent across every project:
+            <ul>
+                <li><b>snake_case</b>: variables and functions</li>
+                <li><b>PascalCase</b>: types</li>
+                <li><b>SCREAMING_SNAKE_CASE</b>: preprocessors</li>
+            </ul>
+        </p>
+        <p>
+            <b>Project Structure: </b><br>
+            I hate messy include chains and header spaghetti, so I stick to a simple layout:
+            <ul>
+                <li><b>common.h</b>: my “universal” header. It has #pragma once, all config macros, typedefs, and stdint.h</li>
+                <li><b>&lt;module&gt;.c</b>: include common.h or module related .h/.c files</li>
+                <li><b>main.c</b>: entry point with the general algorithm. include common.h or related .h/.c files.</li>
+            </ul>
+        </p>
+        <p>
+            <b>Safety Rules/Guide: </b><br>
+            To avoid the classic “C pitfalls” and for easy remembering, I have simplified (or maybe oversimplified) the 10 rules from <a href="https://web.eecs.umich.edu/~imarkov/10rules.pdf">The Power of 10: Rules for Developing Safety-Critical Code</a> by Gerard J. Holzmann.
+            In my opinion, this list should treated more like a optional checklist or a guide than a rulebook because not every application needs to be absolutely safety-critical but it never hurts to be more than less.
+            <ol>
+                <li>No goto, recursion, or setjmp/longjmp (control and scope safety)</li>
+                <li>Variables declared as local as possible (control and scope safety)</li>
+                <li>Only one level of deref, no function pointers, no hidden deref (memory safety)</li>
+                <li>No dynamic memory after initialization (memory safety)</li>
+                <li>Check parameters and non-void return values (bounds and check safety)</li>
+                <li>At least two asserts per function (bounds and check safety)</li>
+                <li>Every loop must either have a clear upper bound or be provably non-terminating (bounds and check safety)</li>
+                <li>Functions stay under ~60 lines (meta)</li>
+                <li>Preprocessor for only headers and simple macros (meta)</li>
+                <li>Clean pass compilation with all warnings, pedantic, and static analysis (meta)</li>
+            </ol>
+        </p>
+        <p>
+            <b>Recommended: </b><br>
+            <ul>
+                <li><b>Arena allocators</b>: a perfect fit for rule #4 </li>
+                <li><b>Dynamic arrays</b>: flexible storage without manual reallocation boilerplate</li>
+                <li><b>stb-style/header-only libraries</b>: drop-in, minimal dependencies, easy to use</li>
+            </ul>
+        </p>
+        <p>
+            By keeping naming, structure, and safety consistent, I can open up a project months later and instantly feel at home in the code.
+        </p>
+        </blockquote>
+        </code>
+    </section>
+    <hr>
+</body>
+</html>

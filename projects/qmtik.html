@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="../FAVICON.ICO">
+    <title>Arin Upadhyay</title>
+</head>
+<body bgcolor="#181818" text="white">
+    <header>
+        <code>👨‍💻 <b>ARIN UPADHYAY</b> BSc. Computer Science</code>
+    </header>
+    <img src="../RGBDIV.GIF" height="1" width="225">
+    <br>
+    <section>
+        <code>
+        <a href="../index.html">HOME</a> | <a href="../blog.html">BLOG</a> | <a href="../projects.html">PROJECTS</a> | <a href="../other.html">OTHER</a>
+        </code>
+    </section>
+    <img src="../RGBDIV.GIF" height="1" width="225">
+    <br>
+    <section>
+        <code>
+        <small>07-09-2025</small>
+        <h2>QMTIK</h2>
+        <blockquote>
+        <p>
+            When most people think of neural networks, they imagine massive models trained on racks of GPUs, running in the cloud. 
+            But what if you could train a neural network entirely on cpu and run it on a microcontroller? 
+            That's exactly what the QMTIK (Quantized Model Training and Inference Kit) sets out to do. 
+            It is a minimal, dependency-free implementation of a quantized neural network designed for embedded systems and resource-constrained environments. 
+            By using 8-bit integers for both weights and activations and heap-less memory, it delivers the efficiency needed to deploy machine learning on devices with just a few kilobytes of memory.
+        </p>
+        <h3>Why Quantization</h3>
+        <p>
+            Normally, neural networks are trained and run with 32-bit floating point weights and activations. 
+            But this is makes running the models on embedded hardware extremely diificult due slower hardware and small memory.
+            By quantizing everything to 8 bits, we get:
+            <ul>
+                <li>4x smaller models which are easier to store</li>
+                <li>2-4x faster inference</li>
+                <li>Minimal accuracy loss (often &lt;1%) if training is quantization aware</li>
+            </ul>
+            For example, on the MNIST digit recognition task, this kit achieves ~90% test accuracy with just 300 KB model size (vs ~1.2 MB for float32) and &lt;1 ms inference time on a modern CPU. 
+            That's small and fast enough to run in real-time on many microcontrollers.
+        </p>
+        <h3>What is it good for</h3>
+        <p>
+            This kit is not meant to compete with cloud-scale AI. Instead, it shines in environments where:
+            <ul>
+                <li>Memory is limited (IoT devices, wearables, industrial sensors)</li>
+                <li>Power is constrained (edge devices running on batteries or solar)</li>
+                <li>Determinism is required (real-time systems where malloc/free isnt allowed)</li>
+                <li>Learning is the goal (understanding how quantized neural nets really work)</li>
+                <li>Rapid prototyping (quickly test a small neural network idea)</li>
+            </ul>
+        </p>
+        <h3>Features</h3>
+        <p>
+            <ul>
+                <li>INT8 weights and activations for low memory usage, small model and fast inference</li>
+                <li>Fake quantization during training which minimizes accuracy loss from quantization</li>
+                <li>Momentum and adaptive learning rate optimizers</li>
+                <li>Static scaling factors</li>
+                <li>Extremely configurable with custom network architecture, multiple activation, output, and cost functions</li>
+                <li>No dynamic memory allocation</li>
+                <li>No dependencies</li>
+            </ul>
+        <p>
+            This project is a step towards making AI practical on tiny machines.
+            Whether you are building an IoT project, experimenting with edge AI, or just curious about how quantized neural networks work, this project provides a clean, hackable foundation.
+        </p>
+        </blockquote>
+        </code>
+    </section>
+    <hr>
+</body>
+</html>
