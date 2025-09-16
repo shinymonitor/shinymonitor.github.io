@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="../FAVICON.ICO">
+    <title>Arin Upadhyay</title>
+</head>
+<body bgcolor="#181818" text="white">
+    <header>
+        <code>👨‍💻 <b>ARIN UPADHYAY</b> BSc. Computer Science</code>
+    </header>
+    <img src="../RGBDIV.GIF" height="1" width="225">
+    <br>
+    <section>
+        <code>
+        <a href="../index.html">HOME</a> | <a href="../blog.html">BLOG</a> | <a href="../projects.html">PROJECTS</a> | <a href="../other.html">OTHER</a>
+        </code>
+    </section>
+    <img src="../RGBDIV.GIF" height="1" width="225">
+    <br>
+    <section>
+        <code>
+        <small>16-09-2025</small>
+        <h2>What is Dogfooding</h2>
+        <blockquote>
+        <p>
+            "Dogfooding" is the practice of using your own products.
+            It's not just another form of testing. 
+            It's the only way to understand the true quality of life for your user, to feel the friction points, and to discover the missing features that no automated test can. 
+            When you design something you know you are going to use in the future, you are forced to make good decisions and improve the experience of the user because that user is you.
+            My projects are an ecosystem, and they grow simultaneously by feeding each other.
+        </p>
+        <p>
+            <b>Case: NCT</b><br>
+            My C project manager, NCT, is the foundation of my workflow.
+            I use it to build and test all my other C projects.
+            This creates an immediate, powerful feedback loop.
+            Recently, while building another project, I found myself writing the same boilerplate.
+            That frustration led me to add features to avoid this into the generated build.h.
+            I solved my own real-world annoyance, and every user of NCT benefits.
+        </p>
+        <p>
+            <b>Case: QMTIK and VOCAL</b><br>
+            I am currently building VOCAL, a locally-running voice assistant, which uses my other project QMTIK, a quantized neural network library for embedded systems.
+            This relationship forces me to make better architectural decisions when developing QMTIK.
+            Knowing that VOCAL will run on a microcontroller with no heap means QMTIK must be completely allocation-agnostic.
+            When I am my own future customer, it ensures that QMTIK is a practical tool made for a specific, challenging purpose.
+        </p>
+        <p>
+            <b>Case: libefpix</b><br>
+            Sometimes, dogfooding also teaches you when <b>not</b> to use your own code.
+            My initial plan for libefpix was to use my own No-Heap-RSA Zig library.
+            It would be the ultimate dogfooding test.
+            But I realised that libefpix needs maximum security and performance.
+            My library is an unaudited RSA implementation, and RSA itself is known to be slower and less efficient than the modern crypto stack.
+            This led me to update the use cases of the RSA library and use the Monocypher library as the core dependency.
+            Dogfooding gives you a fresh perspective of where to use and not to use your own product.
+        </p>
+        <p>
+            By being your own customer, you close the gap between developer and user.
+            You stop just writing code and start building experiences.
+            Your entire project ecosystem grows stronger, more practical, and more useful with every feedback loop.
+        </p>
+        </blockquote>
+        </code>
+    </section>
+    <hr>
+</body>
+</html>
